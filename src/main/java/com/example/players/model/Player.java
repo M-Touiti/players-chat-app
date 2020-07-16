@@ -22,7 +22,7 @@ public class Player {
      * Check if this player is null or has an empty name.
      */
 	public boolean empty() {
-		return this == null || "".equals(name);
+		return "".equals(name);
 	}
 
 	public String getName() {
@@ -49,8 +49,9 @@ public class Player {
 		if (name == null) {
 			if (other.name != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!name.equals(other.name)) {
 			return false;
+		}
 		return true;
 	}	
 	
