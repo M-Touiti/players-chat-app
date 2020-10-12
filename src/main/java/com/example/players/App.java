@@ -7,9 +7,20 @@ package com.example.players;
  */
 public class App {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args){	
 		
+		ChatMonitoring monitoringChat = new ChatMonitoring(args);
+			
+		try {
+			monitoringChat.startChat();
+			monitoringChat.getChatInfo();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}				
 	}
+	
+	
 
+	
 }
